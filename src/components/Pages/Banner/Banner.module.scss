@@ -1,0 +1,84 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+
+@import "../../../styles/variables/mixins";
+
+.Banner {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+
+  background-image: url("/banner_prev.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  & video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.Text {
+  position: absolute;
+  bottom: s.$medium;
+  left: s.$small;
+  width: 90vw;
+
+  & h1 {
+    @include font_white_30(700);
+    text-transform: uppercase;
+  }
+
+  & h2 {
+    @include font_white_20();
+    margin-left: s.$extra-small;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .Text {
+    bottom: s.$large;
+    left: s.$mid-large;
+    width: 75vw;
+    max-width: 500px;
+
+    & h1 {
+      @include font_white_36(700);
+    }
+
+    & h2 {
+      @include font_white_24();
+      margin-left: s.$small;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Banner {
+    height: 100vh;
+  }
+
+  .Text {
+    bottom: s.$extra-large;
+    left: s.$large;
+    width: 50vw;
+    max-width: 750px;
+
+    & h1 {
+      @include font_white_48(700);
+    }
+
+    & h2 {
+      @include font_white_30();
+      margin-left: s.$medium;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .Text {
+    left: s.$extra-large;
+  }
+}

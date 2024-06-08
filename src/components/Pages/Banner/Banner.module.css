@@ -1,0 +1,129 @@
+.Banner {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  background-image: url("/banner_prev.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.Banner video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Text {
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+  width: 90vw;
+}
+.Text h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.Text h1::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Text h1::selection {
+  background: #fff;
+  color: #000;
+}
+.Text h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 5px;
+}
+.Text h2::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Text h2::selection {
+  background: #fff;
+  color: #000;
+}
+
+@media screen and (min-width: 500px) {
+  .Text {
+    bottom: 50px;
+    left: 35px;
+    width: 75vw;
+    max-width: 500px;
+  }
+  .Text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .Text h1::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .Text h1::selection {
+    background: #fff;
+    color: #000;
+  }
+  .Text h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    margin-left: 10px;
+  }
+  .Text h2::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .Text h2::selection {
+    background: #fff;
+    color: #000;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Banner {
+    height: 100vh;
+  }
+  .Text {
+    bottom: 75px;
+    left: 50px;
+    width: 50vw;
+    max-width: 750px;
+  }
+  .Text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .Text h1::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .Text h1::selection {
+    background: #fff;
+    color: #000;
+  }
+  .Text h2 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    margin-left: 25px;
+  }
+  .Text h2::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .Text h2::selection {
+    background: #fff;
+    color: #000;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Text {
+    left: 75px;
+  }
+}/*# sourceMappingURL=Banner.module.css.map */

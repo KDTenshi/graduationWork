@@ -1,0 +1,64 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+
+@import "../../../styles/variables/mixins";
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  width: 100%;
+
+  border-bottom: s.$extra-small solid c.$black;
+  background: c.$white;
+}
+
+.Wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: s.$extra-small s.$medium;
+}
+
+.Contacts {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .Wrap {
+    padding: s.$small s.$large;
+  }
+
+  .Header {
+    border-bottom: none;
+  }
+
+  .MenuBtn {
+    display: none;
+  }
+
+  .Contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: s.$small;
+
+    & a {
+      @include link_black(16px);
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .Wrap {
+    padding: s.$mid-small s.$extra-large;
+  }
+
+  .Contacts {
+    gap: s.$medium;
+  }
+}

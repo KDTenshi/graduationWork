@@ -1,0 +1,121 @@
+.NavBar {
+  width: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Loader {
+  height: 50px;
+  box-shadow: 0 0 125px 50px #fff;
+  animation: load 1s infinite linear;
+}
+
+.Item {
+  padding: 10px 25px;
+  background: #000;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+}
+.Item::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Item::selection {
+  background: #fff;
+  color: #000;
+}
+.Item:hover {
+  background: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+.Item:hover::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Item:hover::selection {
+  background: #000;
+  color: #fff;
+}
+.Item:hover .SubMenu {
+  display: flex;
+}
+
+.SubMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  width: 25vw;
+  animation: show 0.25s ease-in-out;
+}
+.SubMenu a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.25s;
+}
+.SubMenu a::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.SubMenu a::selection {
+  background: #fff;
+  color: #000;
+}
+.SubMenu a:hover {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+}
+.SubMenu a:hover::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.SubMenu a:hover::selection {
+  background: #000;
+  color: #fff;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes load {
+  from {
+    transform: translateX(-100vh);
+  }
+  to {
+    transform: translateX(100vh);
+  }
+}
+@media screen and (width < 1200px) {
+  .NavBar {
+    display: none;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Item {
+    padding: 15px 35px;
+  }
+}/*# sourceMappingURL=NavBar.module.css.map */

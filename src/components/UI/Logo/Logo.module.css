@@ -1,0 +1,45 @@
+.Logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.Logo h1 {
+  text-transform: uppercase;
+  display: none;
+}
+
+.Black h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #000;
+}
+.Black h1::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Black h1::selection {
+  background: #000;
+  color: #fff;
+}
+
+.White h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #fff;
+}
+.White h1::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.White h1::selection {
+  background: #fff;
+  color: #000;
+}
+
+@media screen and (min-width: 1200px) {
+  .Logo h1 {
+    display: block;
+  }
+}/*# sourceMappingURL=Logo.module.css.map */

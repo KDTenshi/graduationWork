@@ -1,0 +1,55 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+
+@import "../../../styles/variables/mixins";
+
+.Menu {
+  width: 100%;
+  height: 100vh;
+  background: c.$black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: s.$small;
+
+  & a {
+    @include link_white(20px);
+  }
+}
+
+.Loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: s.$medium;
+
+  & h2 {
+    @include font_white_20();
+  }
+
+  & div {
+    width: 100px;
+    height: 100px;
+
+    border: 2px dashed c.$white;
+    border-radius: 100%;
+
+    animation: spin 5s infinite linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

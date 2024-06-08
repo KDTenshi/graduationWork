@@ -1,0 +1,37 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+
+@import "../../../styles/variables/mixins";
+
+.Logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: s.$medium;
+
+  & h1 {
+    text-transform: uppercase;
+    display: none;
+  }
+}
+
+.Black {
+  & h1 {
+    @include font_black_36(900);
+  }
+}
+
+.White {
+  & h1 {
+    @include font_white_36(900);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Logo {
+    & h1 {
+      display: block;
+    }
+  }
+}

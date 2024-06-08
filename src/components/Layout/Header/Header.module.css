@@ -1,0 +1,76 @@
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 5px solid #000;
+  background: #fff;
+}
+
+.Wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 25px;
+}
+
+.Contacts {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .Wrap {
+    padding: 10px 50px;
+  }
+  .Header {
+    border-bottom: none;
+  }
+  .MenuBtn {
+    display: none;
+  }
+  .Contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .Contacts a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+  }
+  .Contacts a::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Contacts a::selection {
+    background: #000;
+    color: #fff;
+  }
+  .Contacts a:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transition: all 0.25s;
+  }
+  .Contacts a:hover:after {
+    left: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Wrap {
+    padding: 15px 75px;
+  }
+  .Contacts {
+    gap: 25px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

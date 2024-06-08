@@ -1,0 +1,95 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+
+@import "../../../styles/variables/mixins";
+
+.NavBar {
+  width: 100%;
+  background: c.$black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Loader {
+  height: 50px;
+  box-shadow: 0 0 125px 50px c.$white;
+  animation: load 1s infinite linear;
+}
+
+.Item {
+  padding: s.$small s.$medium;
+  background: c.$black;
+  @include font_white_16();
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+
+  &:hover {
+    background: c.$white;
+    @include font_black_16;
+
+    & .SubMenu {
+      display: flex;
+    }
+  }
+}
+
+.SubMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: c.$black;
+  width: 25vw;
+  animation: show 0.25s ease-in-out;
+
+  & a {
+    @include font_white_16();
+    text-decoration: none;
+    padding: s.$extra-small 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font_black_16();
+      background: c.$white;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes load {
+  from {
+    transform: translateX(-100vh);
+  }
+
+  to {
+    transform: translateX(100vh);
+  }
+}
+
+@media screen and (width < 1200px) {
+  .NavBar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .Item {
+    padding: s.$mid-small s.$mid-large;
+  }
+}

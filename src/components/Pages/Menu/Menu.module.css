@@ -1,0 +1,80 @@
+.Menu {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.Nav a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+.Nav a::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Nav a::selection {
+  background: #fff;
+  color: #000;
+}
+.Nav a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: all 0.25s;
+}
+.Nav a:hover:after {
+  left: 0;
+  width: 100%;
+}
+
+.Loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.Loader h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+.Loader h2::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Loader h2::selection {
+  background: #fff;
+  color: #000;
+}
+.Loader div {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #fff;
+  border-radius: 100%;
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=Menu.module.css.map */

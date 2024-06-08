@@ -1,0 +1,14 @@
+@use "./variables/colors" as c;
+@use "./variables/spacings" as s;
+
+@import "./variables/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background: c.$white;
+}
