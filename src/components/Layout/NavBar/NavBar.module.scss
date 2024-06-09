@@ -7,7 +7,8 @@
 .NavBar {
   width: 100%;
   background: c.$black;
-  display: flex;
+  display: none;
+
   align-items: center;
   justify-content: center;
 }
@@ -19,12 +20,14 @@
 }
 
 .Item {
-  padding: s.$small s.$medium;
+  padding: s.$small s.$mid-small;
   background: c.$black;
   @include font_white_16();
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.25s;
   position: relative;
+  text-decoration: none;
 
   &:hover {
     background: c.$white;
@@ -48,6 +51,7 @@
   width: 25vw;
   max-width: 300px;
   animation: show 0.25s ease-in-out;
+  text-transform: none;
 
   & a {
     @include font_white_16();
@@ -84,14 +88,14 @@
   }
 }
 
-@media screen and (max-width: b.$m) {
+@media screen and (min-width: b.$m) {
   .NavBar {
-    display: none;
+    display: flex;
   }
 }
 
 @media screen and (min-width: b.$xl) {
   .Item {
-    padding: s.$mid-small s.$mid-large;
+    padding: s.$mid-small s.$medium;
   }
 }
