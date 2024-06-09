@@ -15,8 +15,8 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: s.$mid-small;
-    height: 20vh;
-    max-height: 100px;
+    height: 25vh;
+    max-height: 200px;
     background-size: cover;
     background-position: center;
     transition: all 0.25s;
@@ -32,20 +32,12 @@
   .Sections {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
-    & a {
-      max-height: 125px;
-    }
   }
 }
 
 @media screen and (min-width: b.$m) {
   .Sections {
     gap: s.$mid-small;
-
-    & a {
-      max-height: 150px;
-    }
   }
 }
 
@@ -53,7 +45,6 @@
   .Sections {
     & a {
       @include font_white_20();
-      max-height: 200px;
     }
   }
 }

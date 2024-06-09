@@ -21,8 +21,8 @@
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px;
-  height: 20vh;
-  max-height: 100px;
+  height: 25vh;
+  max-height: 200px;
   background-size: cover;
   background-position: center;
   transition: all 0.25s;
@@ -45,16 +45,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .Sections a {
-    max-height: 125px;
-  }
 }
 @media screen and (min-width: 1000px) {
   .Sections {
     gap: 15px;
-  }
-  .Sections a {
-    max-height: 150px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -62,7 +56,6 @@
     font-size: 20px;
     font-weight: 400;
     color: #fff;
-    max-height: 200px;
   }
   .Sections a::-moz-selection {
     background: #fff;
