@@ -1,24 +1,24 @@
 import { FC } from "react";
 import s from "./Menu.module.css";
-import { getSections } from "@/utils/getSections";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import PhoneLink from "@/components/UI/PhoneLink/PhoneLink";
 import MailLink from "@/components/UI/MailLink/MailLink";
+import { getCategories } from "@/utils/getCategories";
 
 const Menu: FC = async () => {
-  const sections = await getSections();
+  const categories = await getCategories();
 
-  if (!sections) redirect("/");
+  if (!categories) return;
 
   return (
     <div className={s.Menu}>
       <nav className={s.Nav}>
-        {sections.map((section) => (
-          <Link href={`/sections/${section.id}`} key={section.id}>
-            {section.title}
+        {categories.map((category) => (
+          <Link href={`/categories/${category.id}`} key={category.id}>
+            {category.title}
           </Link>
         ))}
+        <Link href={"/about"}>О нас</Link>
         <MailLink />
         <PhoneLink />
       </nav>

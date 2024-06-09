@@ -13,7 +13,7 @@ const BenefitCard: FC<BenefitCardProps> = ({ title, body, img }) => {
     <div className={s.Card}>
       <h3>{title}</h3>
       <p>{body}</p>
-      <Image src={img} alt={title} />
+      <Image src={img} alt={title} priority />
     </div>
   );
 };

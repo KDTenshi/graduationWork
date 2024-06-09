@@ -4,11 +4,9 @@ import { FC, Suspense } from "react";
 
 const MenuPage: FC = () => {
   return (
-    <main>
-      <Suspense fallback={<MenuSkeleton />}>
-        <Menu />
-      </Suspense>
-    </main>
+    <Suspense fallback={<MenuSkeleton />}>
+      <Menu />
+    </Suspense>
   );
 };
 

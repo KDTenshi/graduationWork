@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import { TemplateString } from "next/dist/lib/metadata/types/metadata-types";
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, ReactNode } from "react";
 import "@/styles/App.css";
 import Header from "@/components/Layout/Header/Header";
 
@@ -20,12 +20,17 @@ export const metadata: Metadata = {
   description,
 };
 
-const RootLayout: FC<PropsWithChildren> = ({ children }) => {
+interface RootLayoutProps extends PropsWithChildren {
+  menu: ReactNode;
+}
+
+const RootLayout: FC<RootLayoutProps> = ({ children, menu }) => {
   return (
     <html lang="ru">
       <body className={mulish.className}>
         <Header />
         {children}
+        {menu}
       </body>
     </html>
   );

@@ -1,25 +1,48 @@
 @use "../../../styles/variables/colors" as c;
 @use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
 
 @import "../../../styles/variables/mixins";
 
 .Menu {
   width: 100%;
-  height: 100vh;
-  background: c.$black;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: c.$black;
+  padding: s.$ultra-large 0;
+}
+
+.Skeleton {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: c.$black;
 }
 
 .Nav {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: s.$small;
 
   & a {
-    @include link_white(20px);
+    width: 100%;
+    @include font_white_16();
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    padding: s.$small s.$mid-small;
+    background: c.$black;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font_black_16();
+      background: c.$white;
+    }
   }
 }
 
@@ -51,5 +74,19 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .Nav {
+    @include page_block();
+    grid-template-columns: repeat(3, 1fr);
   }
 }
