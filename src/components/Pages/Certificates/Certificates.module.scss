@@ -1,0 +1,49 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Certificates {
+  @include page_block();
+}
+
+.Wrap {
+  display: flex;
+  flex-direction: column;
+  gap: s.$mid-small;
+  padding: s.$medium s.$small;
+}
+
+.Item {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 50vh;
+  max-height: 500px;
+
+  & img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .Item {
+    height: 75vh;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

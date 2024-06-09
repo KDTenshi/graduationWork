@@ -24,7 +24,7 @@ const NavBar: FC = async () => {
           )}
         </div>
       ))}
-      <Link href={"/about"} className={s.Item}>
+      <Link href={"/about"} className={s.About}>
         О нас
       </Link>
     </nav>

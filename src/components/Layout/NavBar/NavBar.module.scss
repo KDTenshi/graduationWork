@@ -22,20 +22,39 @@
 .Item {
   padding: s.$small s.$mid-small;
   background: c.$black;
-  @include font_white_16();
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.25s;
   position: relative;
-  text-decoration: none;
+
+  & p {
+    @include font_white_16();
+  }
 
   &:hover {
     background: c.$white;
-    @include font_black_16;
+
+    & p {
+      @include font_black_16;
+    }
 
     & .SubMenu {
       display: flex;
     }
+  }
+}
+
+.About {
+  padding: s.$small s.$mid-small;
+  background: c.$black;
+  @include font_white_16();
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s;
+
+  &:hover {
+    background: c.$white;
+    @include font_black_16;
   }
 }
 
@@ -96,6 +115,10 @@
 
 @media screen and (min-width: b.$xl) {
   .Item {
+    padding: s.$mid-small s.$medium;
+  }
+
+  .About {
     padding: s.$mid-small s.$medium;
   }
 }

@@ -15,39 +15,75 @@
 .Item {
   padding: 10px 15px;
   background: #000;
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.25s;
   position: relative;
-  text-decoration: none;
 }
-.Item::-moz-selection {
+.Item p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+.Item p::-moz-selection {
   background: #fff;
   color: #000;
 }
-.Item::selection {
+.Item p::selection {
   background: #fff;
   color: #000;
 }
 .Item:hover {
   background: #fff;
+}
+.Item:hover p {
   font-size: 16px;
   font-weight: 400;
   color: #000;
 }
-.Item:hover::-moz-selection {
+.Item:hover p::-moz-selection {
   background: #000;
   color: #fff;
 }
-.Item:hover::selection {
+.Item:hover p::selection {
   background: #000;
   color: #fff;
 }
 .Item:hover .SubMenu {
   display: flex;
+}
+
+.About {
+  padding: 10px 15px;
+  background: #000;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.About::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.About::selection {
+  background: #fff;
+  color: #000;
+}
+.About:hover {
+  background: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+.About:hover::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.About:hover::selection {
+  background: #000;
+  color: #fff;
 }
 
 .SubMenu {
@@ -120,6 +156,9 @@
 }
 @media screen and (min-width: 1400px) {
   .Item {
+    padding: 15px 25px;
+  }
+  .About {
     padding: 15px 25px;
   }
 }/*# sourceMappingURL=NavBar.module.css.map */

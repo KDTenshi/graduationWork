@@ -1,0 +1,78 @@
+.Certificates {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+.Certificates h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Certificates h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Certificates h2::selection {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .Certificates {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1600px;
+    width: 90vw;
+  }
+  .Certificates h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Certificates h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Certificates h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.Wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px 10px;
+}
+
+.Item {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 50vh;
+  max-height: 500px;
+}
+.Item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (min-width: 450px) {
+  .Item {
+    height: 75vh;
+  }
+}
+@media screen and (min-width: 750px) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=Certificates.module.css.map */

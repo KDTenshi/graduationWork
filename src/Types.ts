@@ -12,3 +12,7 @@ export type TCategory = {
   section?: TSection;
   sectionId?: string;
 };
+
+export type TCertificate = {
+  img: string;
+};
