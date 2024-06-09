@@ -1,3 +1,4 @@
+import Application from "@/components/Pages/Application/Application";
 import Banner from "@/components/Pages/Banner/Banner";
 import Benefits from "@/components/Pages/Benefits/Benefits";
 import Certificates from "@/components/Pages/Certificates/Certificates";
@@ -13,6 +14,7 @@ const Page: FC = () => {
       <Benefits />
       <PriceList />
       <Certificates />
+      <Application />
     </main>
   );
 };
