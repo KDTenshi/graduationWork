@@ -1,0 +1,136 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.PriceList {
+  width: 100%;
+  padding: s.$extra-large s.$small;
+  background: c.$black;
+
+  & h2 {
+    @include font_white_24(700);
+    text-transform: uppercase;
+  }
+}
+
+.Form {
+  padding: s.$medium s.$small;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: s.$mid-small;
+  width: 100%;
+
+  & input {
+    @include font_black_14();
+    width: 100%;
+    border-radius: 0;
+    border: 2px solid c.$black;
+    padding: s.$small;
+    outline: 0;
+  }
+
+  & button {
+    @include font_black_14();
+    border-radius: 0;
+    border: 2px solid c.$white;
+    padding: s.$small s.$mid-small;
+    cursor: pointer;
+    background: c.$white;
+    transition: all 0.25s;
+
+    &:hover {
+      background: c.$black;
+      @include font_white_14();
+    }
+  }
+
+  & p {
+    @include font_white_12();
+    text-align: center;
+
+    & a {
+      @include font_white_12();
+    }
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .PriceList {
+    padding: s.$extra-large s.$medium;
+  }
+
+  .Form {
+    min-width: 400px;
+    width: 50vw;
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .PriceList {
+    padding: s.$extra-large s.$mid-large;
+  }
+
+  .Form {
+    padding: s.$medium;
+
+    & input {
+      padding: s.$small s.$mid-small;
+    }
+
+    & p {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .PriceList {
+    padding: s.$extra-large s.$large;
+
+    & h2 {
+      @include font_white_30(700);
+    }
+  }
+
+  .Form {
+    max-width: 600px;
+
+    & input {
+      @include font_black_16();
+    }
+
+    & button {
+      padding: s.$small s.$medium;
+      @include font_black_16();
+
+      &:hover {
+        @include font_white_16();
+      }
+    }
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .PriceList {
+    padding: s.$extra-large;
+  }
+
+  .Form {
+    max-width: 750px;
+
+    & p {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: b.$xl) {
+  .PriceList {
+    padding: s.$extra-large 5vw;
+  }
+}

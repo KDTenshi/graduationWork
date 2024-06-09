@@ -2,7 +2,7 @@ import Menu from "@/components/Pages/Menu/Menu";
 import MenuSkeleton from "@/components/Pages/Menu/MenuSkeleton";
 import { FC, Suspense } from "react";
 
-const MenuPage: FC = () => {
+const Page: FC = () => {
   return (
     <Suspense fallback={<MenuSkeleton />}>
       <Menu />
@@ -10,4 +10,4 @@ const MenuPage: FC = () => {
   );
 };
 
-export default MenuPage;
+export default Page;
