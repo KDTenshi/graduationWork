@@ -235,10 +235,19 @@
   width: 100%;
   padding: 0 s.$small;
 
+  & h2 {
+    @include font_black_24(700);
+    text-transform: uppercase;
+  }
+
   @media screen and (min-width: b.$m) {
     padding: 0;
     margin: s.$large auto;
-    max-width: b.$xl;
+    max-width: 1600px;
     width: 90vw;
+
+    & h2 {
+      @include font_black_30(700);
+    }
   }
 }

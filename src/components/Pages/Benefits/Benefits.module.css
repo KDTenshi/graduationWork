@@ -1,0 +1,152 @@
+.Benefits {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+.Benefits h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Benefits h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Benefits h2::selection {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .Benefits {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1600px;
+    width: 90vw;
+  }
+  .Benefits h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Benefits h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Benefits h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.Wrap {
+  padding: 25px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Card {
+  min-height: 350px;
+  position: relative;
+  padding: 15px 10px;
+  border: 2px solid #000;
+  transition: all 0.25s;
+  padding-top: 125px !important;
+}
+.Card img {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: 10px;
+  right: 10px;
+}
+.Card:nth-child(odd) {
+  background: #fff;
+}
+.Card:nth-child(odd) h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+.Card:nth-child(odd) h3::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Card:nth-child(odd) h3::selection {
+  background: #000;
+  color: #fff;
+}
+.Card:nth-child(odd) p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin: 10px;
+}
+.Card:nth-child(odd) p::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Card:nth-child(odd) p::selection {
+  background: #000;
+  color: #fff;
+}
+.Card:nth-child(even) {
+  background: #000;
+}
+.Card:nth-child(even) h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+.Card:nth-child(even) h3::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Card:nth-child(even) h3::selection {
+  background: #fff;
+  color: #000;
+}
+.Card:nth-child(even) p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin: 10px;
+}
+.Card:nth-child(even) p::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Card:nth-child(even) p::selection {
+  background: #fff;
+  color: #000;
+}
+.Card:nth-child(even) img {
+  filter: invert(100%);
+}
+.Card:hover {
+  box-shadow: 0 0 15px #000;
+}
+
+@media screen and (min-width: 450px) {
+  .Card {
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Wrap {
+    padding: 25px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=Benefits.module.css.map */

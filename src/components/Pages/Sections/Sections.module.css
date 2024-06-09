@@ -6,12 +6,39 @@
   flex-direction: column;
   gap: 10px;
 }
+.Sections h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Sections h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Sections h2::selection {
+  background: #000;
+  color: #fff;
+}
 @media screen and (min-width: 1000px) {
   .Sections {
     padding: 0;
     margin: 50px auto;
-    max-width: 1400px;
+    max-width: 1600px;
     width: 90vw;
+  }
+  .Sections h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Sections h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Sections h2::selection {
+    background: #000;
+    color: #fff;
   }
 }
 .Sections a {

@@ -1,0 +1,93 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Benefits {
+  @include page_block();
+}
+
+.Wrap {
+  padding: s.$medium s.$extra-small;
+  display: flex;
+  flex-direction: column;
+  gap: s.$small;
+}
+
+.Card {
+  min-height: 350px;
+  position: relative;
+  padding: s.$mid-small s.$small;
+  border: 2px solid c.$black;
+  transition: all 0.25s;
+  padding-top: s.$ultra-large !important;
+
+  & img {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: s.$small;
+    right: s.$small;
+  }
+
+  &:nth-child(odd) {
+    background: c.$white;
+
+    & h3 {
+      @include font_black_20(700);
+    }
+
+    & p {
+      @include font_black_16();
+      margin: s.$small;
+    }
+  }
+
+  &:nth-child(even) {
+    background: c.$black;
+
+    & h3 {
+      @include font_white_20(700);
+    }
+
+    & p {
+      @include font_white_16();
+      margin: s.$small;
+    }
+
+    & img {
+      filter: invert(100%);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px c.$black;
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .Card {
+    padding: s.$mid-small;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .Wrap {
+    padding: s.$medium;
+  }
+}
+
+@media screen and (min-width: b.$xl) {
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
