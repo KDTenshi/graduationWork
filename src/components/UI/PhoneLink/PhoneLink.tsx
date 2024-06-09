@@ -7,7 +7,7 @@ interface PhoneLinkProps {
 
 const PhoneLink: FC<PhoneLinkProps> = ({ className = "" }) => {
   return (
-    <Link className={className} href={"tel:+78332451646"} target="_blank">
+    <Link className={className} href={"tel:+78332451646"} target="_blank" replace>
       +7(8332)45-16-46
     </Link>
   );

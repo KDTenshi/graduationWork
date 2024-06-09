@@ -7,7 +7,7 @@ interface MailLinkProps {
 
 const MailLink: FC<MailLinkProps> = ({ className = "" }) => {
   return (
-    <Link className={className} href={"mailto:sales@alfagroup-sport.ru"} target="_blank">
+    <Link className={className} href={"mailto:sales@alfagroup-sport.ru"} target="_blank" replace>
       sales@alfagroup-sport.ru
     </Link>
   );

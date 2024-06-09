@@ -14,11 +14,13 @@ const Menu: FC = async () => {
     <div className={s.Menu}>
       <nav className={s.Nav}>
         {categories.map((category) => (
-          <Link href={`/categories/${category.id}`} key={category.id}>
+          <Link href={`/categories/${category.id}`} key={category.id} replace>
             {category.title}
           </Link>
         ))}
-        <Link href={"/about"}>О нас</Link>
+        <Link href={"/about"} replace>
+          О нас
+        </Link>
         <MailLink />
         <PhoneLink />
       </nav>
