@@ -20,17 +20,12 @@ export const metadata: Metadata = {
   description,
 };
 
-interface RootLayoutProps extends PropsWithChildren {
-  menu: ReactNode;
-}
-
-const RootLayout: FC<RootLayoutProps> = ({ children, menu }) => {
+const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html lang="ru">
       <body className={mulish.className}>
         <Header />
         {children}
-        {menu}
       </body>
     </html>
   );
