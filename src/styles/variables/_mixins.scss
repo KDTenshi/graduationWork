@@ -1,5 +1,6 @@
 @use "./colors" as c;
 @use "./spacings" as s;
+@use "./breakpoints" as b;
 
 // FONT BASES
 
@@ -230,6 +231,14 @@
 // PAGE MIXINS
 
 @mixin page_block() {
-  margin: sp.$large 0;
-  padding: sp.$mid-smal;
+  margin: s.$large 0;
+  width: 100%;
+  padding: 0 s.$small;
+
+  @media screen and (min-width: b.$m) {
+    padding: 0;
+    margin: s.$large auto;
+    max-width: b.$xl;
+    width: 90vw;
+  }
 }

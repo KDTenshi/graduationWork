@@ -58,6 +58,7 @@
   align-items: center;
   background: #000;
   width: 25vw;
+  max-width: 300px;
   animation: show 0.25s ease-in-out;
 }
 .SubMenu a {
@@ -109,7 +110,7 @@
     transform: translateX(100vh);
   }
 }
-@media screen and (width < 1200px) {
+@media screen and (max-width: 1000px) {
   .NavBar {
     display: none;
   }

@@ -20,7 +20,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .Wrap {
     padding: 10px 50px;
   }

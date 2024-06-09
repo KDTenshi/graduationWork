@@ -1,5 +1,6 @@
 @use "../../../styles/variables/colors" as c;
 @use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
 
 @import "../../../styles/variables/mixins";
 
@@ -28,7 +29,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: b.$m) {
   .Wrap {
     padding: s.$small s.$large;
   }
@@ -53,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: b.$xl) {
   .Wrap {
     padding: s.$mid-small s.$extra-large;
   }

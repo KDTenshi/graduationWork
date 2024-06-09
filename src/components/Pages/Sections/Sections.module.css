@@ -1,0 +1,75 @@
+.Sections {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .Sections {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1400px;
+    width: 90vw;
+  }
+}
+.Sections a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px;
+  height: 20vh;
+  max-height: 100px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.25s;
+}
+.Sections a::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Sections a::selection {
+  background: #fff;
+  color: #000;
+}
+.Sections a:hover {
+  box-shadow: 0 0 10px 5px #000;
+  filter: brightness(125%);
+}
+
+@media screen and (min-width: 750px) {
+  .Sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Sections a {
+    max-height: 125px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Sections {
+    gap: 15px;
+  }
+  .Sections a {
+    max-height: 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Sections a {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    max-height: 200px;
+  }
+  .Sections a::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .Sections a::selection {
+    background: #fff;
+    color: #000;
+  }
+}/*# sourceMappingURL=Sections.module.css.map */

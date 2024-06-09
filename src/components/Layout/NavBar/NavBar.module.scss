@@ -1,5 +1,6 @@
 @use "../../../styles/variables/colors" as c;
 @use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
 
 @import "../../../styles/variables/mixins";
 
@@ -45,6 +46,7 @@
   align-items: center;
   background: c.$black;
   width: 25vw;
+  max-width: 300px;
   animation: show 0.25s ease-in-out;
 
   & a {
@@ -82,13 +84,13 @@
   }
 }
 
-@media screen and (width < 1200px) {
+@media screen and (max-width: b.$m) {
   .NavBar {
     display: none;
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: b.$xl) {
   .Item {
     padding: s.$mid-small s.$mid-large;
   }

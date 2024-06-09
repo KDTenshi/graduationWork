@@ -1,5 +1,6 @@
 @use "../../../styles/variables/colors" as c;
 @use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
 
 @import "../../../styles/variables/mixins";
 
@@ -28,7 +29,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: b.$m) {
   .Logo {
     & h1 {
       display: block;
