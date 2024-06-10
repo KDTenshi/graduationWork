@@ -4,6 +4,7 @@ import { TemplateString } from "next/dist/lib/metadata/types/metadata-types";
 import { FC, PropsWithChildren, ReactNode } from "react";
 import "@/styles/App.css";
 import Header from "@/components/Layout/Header/Header";
+import Footer from "@/components/Layout/Footer/Footer";
 
 const mulish = Mulish({ subsets: ["cyrillic", "latin"], weight: ["400", "700", "900"] });
 
@@ -26,6 +27,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => {
       <body className={mulish.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

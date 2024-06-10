@@ -4,11 +4,15 @@ import Logo from "/public/icons/logo_black.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-const Black: FC = () => {
+interface BlackProps {
+  small: boolean;
+}
+
+const Black: FC<BlackProps> = ({ small }) => {
   return (
     <Link href={"/"} className={[s.Logo, s.Black].join(" ")}>
       <Image src={Logo} alt="Logo Black" priority />
-      <h1>Альфа Групп</h1>
+      {!small && <h1>Альфа Групп</h1>}
     </Link>
   );
 };

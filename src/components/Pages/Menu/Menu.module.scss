@@ -12,6 +12,7 @@
   justify-content: center;
   background: c.$black;
   padding: s.$ultra-large 0;
+  border-bottom: 2px solid c.$white;
 }
 
 .Skeleton {
@@ -21,6 +22,7 @@
   align-items: center;
   justify-content: center;
   background: c.$black;
+  border-bottom: 2px solid c.$white;
 }
 
 .Nav {

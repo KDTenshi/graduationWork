@@ -1,0 +1,120 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Footer {
+  padding: s.$large s.$extra-small;
+  background: c.$black;
+}
+
+.Wrap {
+  margin-bottom: s.$mid-small;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: s.$small;
+}
+
+.Links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: s.$small;
+  padding: s.$medium 0;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & a {
+    @include link_white(14px);
+  }
+}
+
+.Policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & a {
+    @include link_white(14px);
+  }
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: s.$small;
+
+  & p {
+    @include font_white_14();
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Footer {
+    padding: s.$large s.$medium;
+  }
+
+  .Wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: s.$medium;
+  }
+
+  .Logo {
+    align-items: start;
+    padding: 0;
+  }
+
+  .Links {
+    padding: 0;
+  }
+
+  .Info {
+    padding: 0;
+
+    & p {
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .Footer {
+    padding: s.$large;
+  }
+
+  .Link {
+    & a {
+      @include link_white(16px);
+    }
+  }
+
+  .Info {
+    & p {
+      @include font_white_16();
+    }
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .Footer {
+    padding: s.$large 0;
+  }
+
+  .Wrap {
+    width: 80vw;
+    margin: 0 auto;
+    margin-bottom: s.$mid-large;
+    max-width: b.$xl;
+  }
+}

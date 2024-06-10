@@ -4,12 +4,13 @@ import White from "./elements/White";
 
 interface LogoProps {
   color?: "black" | "white";
+  small?: boolean;
 }
 
-const Logo: FC<LogoProps> = ({ color = "black" }) => {
-  if (color === "white") return <White />;
+const Logo: FC<LogoProps> = ({ color = "black", small = false }) => {
+  if (color === "white") return <White small={small} />;
 
-  return <Black />;
+  return <Black small={small} />;
 };
 
 export default Logo;
