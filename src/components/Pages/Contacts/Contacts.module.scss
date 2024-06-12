@@ -15,7 +15,7 @@
 .Links {
   display: flex;
   flex-direction: column;
-  gap: s.$small;
+  gap: s.$mid-small;
 
   & p {
     @include font_white_14();
