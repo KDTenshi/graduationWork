@@ -1,0 +1,95 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Contacts {
+  background: c.$black;
+  padding: s.$large s.$extra-small;
+  display: flex;
+  flex-direction: column;
+  gap: s.$medium;
+}
+
+.Links {
+  display: flex;
+  flex-direction: column;
+  gap: s.$small;
+
+  & p {
+    @include font_white_14();
+    text-transform: uppercase;
+    text-align: center;
+
+    & a {
+      @include link_white(14px);
+    }
+  }
+}
+
+.Socials {
+  display: flex;
+  flex-direction: column;
+  gap: s.$small;
+  align-items: center;
+
+  & a {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    background: c.$white;
+    border: 2px solid c.$white;
+    padding: s.$small;
+    @include font_black_14();
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font_white_14();
+      background: c.$black;
+    }
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: s.$large;
+    gap: 0;
+  }
+
+  .Links {
+    gap: s.$mid-small;
+
+    & p {
+      text-align: left;
+
+      @include font_white_16();
+
+      & a {
+        @include link_white(16px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .Contacts {
+    padding: s.$large s.$extra-large;
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .Contacts {
+    padding: s.$large 10vw;
+  }
+}
+
+@media screen and (min-width: b.$xl) {
+  .Contacts {
+    padding: s.$large 15vw;
+  }
+}
