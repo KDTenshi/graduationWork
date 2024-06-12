@@ -2,6 +2,7 @@ import { getSection } from "@/utils/getSection";
 import Link from "next/link";
 import { FC } from "react";
 import s from "./Section.module.css";
+import { redirect } from "next/navigation";
 
 interface SectionProps {
   id: string;
@@ -10,7 +11,7 @@ interface SectionProps {
 const Section: FC<SectionProps> = async ({ id }) => {
   const section = await getSection(id);
 
-  if (!section) return;
+  if (!section) redirect("/not-found");
 
   return (
     <div className={s.Section}>

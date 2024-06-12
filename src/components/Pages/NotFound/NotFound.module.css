@@ -1,0 +1,20 @@
+.NotFound {
+  display: flex;
+  padding: 125px 15px;
+  justify-content: center;
+  align-items: center;
+}
+.NotFound h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+.NotFound h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.NotFound h2::selection {
+  background: #000;
+  color: #fff;
+}/*# sourceMappingURL=NotFound.module.css.map */

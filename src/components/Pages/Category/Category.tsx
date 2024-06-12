@@ -1,6 +1,7 @@
 import { FC } from "react";
 import s from "./Category.module.css";
 import { getCategory } from "@/utils/getCategory";
+import { redirect } from "next/navigation";
 
 interface CategoryProps {
   id: string;
@@ -9,7 +10,7 @@ interface CategoryProps {
 const Category: FC<CategoryProps> = async ({ id }) => {
   const category = await getCategory(id);
 
-  if (!category) return;
+  if (!category) redirect("/not-found");
 
   return (
     <div className={s.Category}>
