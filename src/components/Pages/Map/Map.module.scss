@@ -1,0 +1,41 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Map {
+  @include page_block();
+}
+
+.Wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: s.$mid-small 0;
+
+  & iframe {
+    border: 2px solid c.$black;
+    height: 75vh;
+    min-height: 300px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .Wrap {
+    & iframe {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Wrap {
+    & iframe {
+      max-width: 800px;
+      width: 80%;
+    }
+  }
+}

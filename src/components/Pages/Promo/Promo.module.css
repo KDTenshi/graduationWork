@@ -1,0 +1,73 @@
+.Promo {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+.Promo h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Promo h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Promo h2::selection {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .Promo {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1600px;
+    width: 90vw;
+  }
+  .Promo h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Promo h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Promo h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.Video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0;
+}
+.Video iframe {
+  width: 95%;
+  height: 200px;
+  border: 0;
+}
+
+@media screen and (min-width: 450px) {
+  .Video iframe {
+    width: 90%;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .Video iframe {
+    width: 90%;
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Video iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+  }
+}/*# sourceMappingURL=Promo.module.css.map */

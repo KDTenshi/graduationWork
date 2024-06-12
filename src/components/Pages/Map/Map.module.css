@@ -1,0 +1,66 @@
+.Map {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+.Map h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Map h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Map h2::selection {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .Map {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1600px;
+    width: 90vw;
+  }
+  .Map h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Map h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Map h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.Wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 15px 0;
+}
+.Wrap iframe {
+  border: 2px solid #000;
+  height: 75vh;
+  min-height: 300px;
+  width: 100%;
+}
+
+@media screen and (min-width: 450px) {
+  .Wrap iframe {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 750px) {
+  .Wrap iframe {
+    max-width: 800px;
+    width: 80%;
+  }
+}/*# sourceMappingURL=Map.module.css.map */

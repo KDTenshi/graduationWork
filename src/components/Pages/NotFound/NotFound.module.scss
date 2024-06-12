@@ -6,7 +6,8 @@
 
 .NotFound {
   display: flex;
-  padding: s.$ultra-large s.$mid-small;
+  height: 100vh;
+  padding: 0 s.$mid-small;
   justify-content: center;
   align-items: center;
 
