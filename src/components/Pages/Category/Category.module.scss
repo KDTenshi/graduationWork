@@ -1,0 +1,10 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Category {
+  height: 100vh;
+  padding: s.$ultra-large 0;
+}

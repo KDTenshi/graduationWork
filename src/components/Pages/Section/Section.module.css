@@ -1,0 +1,37 @@
+.Section {
+  height: 100vh;
+  padding: 125px 0;
+}
+.Section div {
+  display: flex;
+  flex-direction: column;
+}
+.Section div a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  position: relative;
+  text-decoration: none;
+}
+.Section div a::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Section div a::selection {
+  background: #000;
+  color: #fff;
+}
+.Section div a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #000;
+  transition: all 0.25s;
+}
+.Section div a:hover:after {
+  left: 0;
+  width: 100%;
+}/*# sourceMappingURL=Section.module.css.map */

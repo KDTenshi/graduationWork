@@ -1,0 +1,19 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Section {
+  height: 100vh;
+  padding: s.$ultra-large 0;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    & a {
+      @include link_black(16px);
+    }
+  }
+}
