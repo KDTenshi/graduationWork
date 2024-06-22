@@ -1,0 +1,66 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Categories {
+  background: c.$black;
+  display: flex;
+  flex-direction: column;
+  gap: s.$extra-small;
+  align-items: center;
+  padding: s.$medium s.$small;
+
+  & a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: s.$mid-small;
+    @include font_white_14();
+    text-decoration: none;
+    background: c.$black;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.25s;
+
+    &:hover {
+      @include font_black_14();
+      background: c.$white;
+    }
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .Categories {
+    padding: s.$medium;
+
+    & a {
+      @include font_white_16();
+
+      &:hover {
+        @include font_black_16();
+      }
+    }
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .Categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: b.$xl) {
+  .Categories {
+    padding: s.$medium 10vw;
+  }
+}

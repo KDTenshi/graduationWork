@@ -1,4 +1,5 @@
 import { TCategory } from "@/Types";
+import { getSection } from "./getSection";
 
 export async function getCategory(id: string) {
   try {
@@ -6,11 +7,15 @@ export async function getCategory(id: string) {
 
     if (!categoryRes.ok) throw new Error("Something went wrong");
 
-    const category = await categoryRes.json();
+    const categoryParsed = await categoryRes.json();
 
-    console.log(category);
+    const category: TCategory = categoryParsed[0];
 
-    return category[0] as TCategory;
+    const section = await getSection(category.sectionId);
+
+    category.section = section;
+
+    return category;
   } catch (e) {
     console.error(`Fetching error: ${e}`);
   }

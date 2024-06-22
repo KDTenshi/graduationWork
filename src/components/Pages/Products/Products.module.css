@@ -1,0 +1,148 @@
+.Empty {
+  padding: 125px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Empty h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+.Empty h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Empty h2::selection {
+  background: #000;
+  color: #fff;
+}
+
+.Product {
+  width: 90%;
+  margin: 15px auto;
+  display: block;
+  text-decoration: none;
+  padding: 25px 10px;
+  transition: all 0.25s;
+  background: #fff;
+}
+.Product h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+.Product h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Product h2::selection {
+  background: #000;
+  color: #fff;
+}
+.Product p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+.Product p::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Product p::selection {
+  background: #000;
+  color: #fff;
+}
+.Product_Image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.Product_Image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Product_Params {
+  padding: 10px;
+}
+.Product:hover {
+  box-shadow: 0 0 15px #000;
+}
+
+@media screen and (min-width: 450px) {
+  .Product {
+    padding: 25px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .Products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 25px;
+    gap: 15px;
+  }
+  .Product {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Product {
+    padding: 25px 35px;
+  }
+  .Product h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Product h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Product h2::selection {
+    background: #000;
+    color: #fff;
+  }
+  .Product p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+  .Product p::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Product p::selection {
+    background: #000;
+    color: #fff;
+  }
+  .Empty h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Empty h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Empty h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Products {
+    width: 90vw;
+    margin: 25px auto;
+    padding: 0;
+    max-width: 1600px;
+  }
+}/*# sourceMappingURL=Products.module.css.map */

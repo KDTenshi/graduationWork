@@ -1,0 +1,93 @@
+.Categories {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding: 25px 10px;
+}
+.Categories a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  background: #000;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.25s;
+}
+.Categories a::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.Categories a::selection {
+  background: #fff;
+  color: #000;
+}
+.Categories a:hover {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+}
+.Categories a:hover::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Categories a:hover::selection {
+  background: #000;
+  color: #fff;
+}
+
+@media screen and (min-width: 750px) {
+  .Categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Categories {
+    padding: 25px;
+  }
+  .Categories a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .Categories a::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .Categories a::selection {
+    background: #fff;
+    color: #000;
+  }
+  .Categories a:hover {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+  .Categories a:hover::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Categories a:hover::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Categories {
+    padding: 25px 10vw;
+  }
+}/*# sourceMappingURL=Categories.module.css.map */

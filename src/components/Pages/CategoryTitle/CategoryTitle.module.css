@@ -1,0 +1,38 @@
+.CategoryTitle {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+}
+.CategoryTitle h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.CategoryTitle h2::-moz-selection {
+  background: #fff;
+  color: #000;
+}
+.CategoryTitle h2::selection {
+  background: #fff;
+  color: #000;
+}
+
+@media screen and (min-width: 1000px) {
+  .CategoryTitle h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .CategoryTitle h2::-moz-selection {
+    background: #fff;
+    color: #000;
+  }
+  .CategoryTitle h2::selection {
+    background: #fff;
+    color: #000;
+  }
+}/*# sourceMappingURL=CategoryTitle.module.css.map */

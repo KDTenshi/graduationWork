@@ -1,0 +1,175 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Image {
+  position: relative;
+  height: 75vh;
+  min-height: 400px;
+
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & h2 {
+    @include font_white_24(700);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: s.$medium;
+    left: s.$small;
+  }
+}
+
+.Form {
+  display: flex;
+  padding: s.$small;
+  min-height: 350px;
+  justify-content: center;
+  align-items: flex-end;
+
+  & form {
+    padding: s.$medium s.$small;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: s.$mid-small;
+    width: 100%;
+
+    & h2 {
+      @include font_black_24(700);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    & input {
+      @include font_black_14();
+      width: 100%;
+      border-radius: 0;
+      border: 2px solid c.$black;
+      padding: s.$small;
+      outline: 0;
+    }
+
+    & button {
+      @include font_black_14();
+      border-radius: 0;
+      border: 2px solid c.$black;
+      padding: s.$small s.$mid-small;
+      cursor: pointer;
+      background: c.$white;
+      transition: all 0.25s;
+
+      &:hover {
+        background: c.$black;
+        @include font_white_14();
+      }
+    }
+
+    & p {
+      @include font_black_12();
+      text-align: center;
+
+      & a {
+        @include font_black_12();
+      }
+    }
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .Image {
+    & h2 {
+      bottom: s.$mid-large;
+      left: s.$medium;
+      width: 75%;
+    }
+  }
+
+  .Form {
+    padding: s.$medium;
+
+    & form {
+      max-width: 500px;
+
+      & p {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Image {
+    & h2 {
+      left: s.$large;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .SectionBanner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .Image {
+    height: 100vh;
+    min-height: 500px;
+
+    & h2 {
+      @include font_white_30(700);
+      bottom: s.$large;
+      left: s.$extra-large;
+      max-width: 400px;
+    }
+  }
+
+  .Form {
+    padding: s.$medium s.$small;
+
+    & form {
+      & h2 {
+        @include font_black_30(700);
+      }
+
+      & input {
+        @include font_black_16();
+      }
+
+      & button {
+        @include font_black_16();
+
+        &:hover {
+          @include font_white_16();
+        }
+      }
+
+      & p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: b.$l) {
+  .Image {
+    & h2 {
+      @include font_white_36(700);
+      max-width: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: b.$xl) {
+  .Image {
+    & h2 {
+      @include font_white_48(700);
+      width: 75%;
+      max-width: 750px;
+    }
+  }
+}

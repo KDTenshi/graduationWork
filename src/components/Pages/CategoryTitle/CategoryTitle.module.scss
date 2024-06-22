@@ -1,0 +1,27 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.CategoryTitle {
+  background: c.$black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: s.$small s.$medium;
+
+  & h2 {
+    @include font_white_24(700);
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .CategoryTitle {
+    & h2 {
+      @include font_white_30(700);
+    }
+  }
+}
