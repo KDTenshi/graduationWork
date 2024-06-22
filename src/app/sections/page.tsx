@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { FC } from "react";
 
 export const metadata: Metadata = {
-  title: "Товары и услуги",
+  title: "Товары и Услуги",
 };
 
 const Page: FC = () => {
