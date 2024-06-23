@@ -1,0 +1,63 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Reviews {
+  @include page_block();
+}
+
+.Slide {
+  padding: s.$extra-small s.$small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & img {
+    width: 100%;
+    max-width: 250px;
+    object-fit: cover;
+  }
+}
+
+.SliderBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+  background: c.$white;
+  border-radius: 0;
+  border: 2px solid c.$black;
+  transition: all 0.25s;
+
+  &:hover {
+    background: c.$black;
+
+    & img {
+      filter: invert(100%);
+    }
+  }
+}
+
+.Prev {
+  left: 0;
+}
+
+.Next {
+  right: 0;
+}
+
+@media screen and (min-width: b.$xs) {
+  .Slide {
+    padding: s.$small;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .SliderBtn {
+    display: block;
+  }
+}

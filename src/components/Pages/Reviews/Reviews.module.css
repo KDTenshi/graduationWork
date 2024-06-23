@@ -1,0 +1,91 @@
+.Reviews {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+.Reviews h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Reviews h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Reviews h2::selection {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .Reviews {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1600px;
+    width: 90vw;
+  }
+  .Reviews h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Reviews h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Reviews h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.Slide {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Slide img {
+  width: 100%;
+  max-width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.SliderBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 0;
+  border: 2px solid #000;
+  transition: all 0.25s;
+}
+.SliderBtn:hover {
+  background: #000;
+}
+.SliderBtn:hover img {
+  filter: invert(100%);
+}
+
+.Prev {
+  left: 0;
+}
+
+.Next {
+  right: 0;
+}
+
+@media screen and (min-width: 450px) {
+  .Slide {
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .SliderBtn {
+    display: block;
+  }
+}/*# sourceMappingURL=Reviews.module.css.map */

@@ -13,3 +13,18 @@
 main {
   background: c.$white;
 }
+
+.swiper-pagination-bullet {
+  height: s.$mid_small !important;
+  width: s.$mid_small !important;
+  background: c.$white !important;
+  border: 2px solid c.$black !important;
+  display: inline-block !important;
+  border-radius: 50% !important;
+  margin: 0 s.$extra_small !important;
+  opacity: 1 !important;
+
+  &-active {
+    background: c.$black !important;
+  }
+}

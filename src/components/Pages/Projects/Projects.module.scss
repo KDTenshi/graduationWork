@@ -1,0 +1,124 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Projects {
+  @include page_block();
+}
+
+.Slider {
+  position: relative;
+}
+
+.SliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+  background: c.$white;
+  border-radius: 0;
+  border: 2px solid c.$black;
+  transition: all 0.25s;
+
+  &:hover {
+    background: c.$black;
+
+    & img {
+      filter: invert(100%);
+    }
+  }
+}
+
+.Prev {
+  left: 0;
+}
+
+.Next {
+  right: 0;
+}
+
+.Slide {
+  padding: s.$extra-small s.$small;
+}
+
+.Project {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  border: 2px solid c.$black;
+
+  & img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include font_black_16();
+    text-transform: uppercase;
+    display: inline-block;
+    background: c.$white;
+    border-radius: 0 0 s.$small 0;
+    padding: s.$extra-small s.$small;
+    border-bottom: 2px solid c.$black;
+    border-right: 2px solid c.$black;
+    max-width: 75%;
+  }
+
+  & p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include font_black_14();
+    display: inline-block;
+    background: c.$white;
+    border-radius: s.$small 0 0 0;
+    padding: s.$extra-small;
+    border-top: 2px solid c.$black;
+    border-left: 2px solid c.$black;
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .Slide {
+    padding: s.$small;
+  }
+
+  .Project {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .SliderButton {
+    display: block;
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .Project {
+    & h3 {
+      padding: s.$small s.$mid-small;
+      @include font_black_20();
+    }
+
+    & p {
+      padding: s.$small s.$mid-small;
+      @include font_black_16();
+    }
+  }
+}
+
+@media screen and (min-width: b.$xl) {
+  .Project {
+    height: 300px;
+  }
+}

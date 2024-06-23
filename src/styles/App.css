@@ -7,4 +7,18 @@
 
 main {
   background: #fff;
+}
+
+.swiper-pagination-bullet {
+  height: 15px !important;
+  width: 15px !important;
+  background: #fff !important;
+  border: 2px solid #000 !important;
+  display: inline-block !important;
+  border-radius: 50% !important;
+  margin: 0 5px !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #000 !important;
 }/*# sourceMappingURL=App.css.map */

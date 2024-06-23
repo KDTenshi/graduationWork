@@ -26,3 +26,15 @@ export type TProduct = {
   img: string;
   price: number;
 };
+
+export type TProject = {
+  id: string;
+  name: string;
+  place: string;
+  video: string;
+  preview: string;
+};
+
+export type TReview = {
+  img: string;
+};

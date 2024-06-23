@@ -1,0 +1,184 @@
+.Projects {
+  margin: 50px 0;
+  width: 100%;
+  padding: 0 10px;
+}
+.Projects h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Projects h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Projects h2::selection {
+  background: #000;
+  color: #fff;
+}
+@media screen and (min-width: 1000px) {
+  .Projects {
+    padding: 0;
+    margin: 50px auto;
+    max-width: 1600px;
+    width: 90vw;
+  }
+  .Projects h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Projects h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Projects h2::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+
+.Slider {
+  position: relative;
+}
+
+.SliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: none;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 0;
+  border: 2px solid #000;
+  transition: all 0.25s;
+}
+.SliderButton:hover {
+  background: #000;
+}
+.SliderButton:hover img {
+  filter: invert(100%);
+}
+
+.Prev {
+  left: 0;
+}
+
+.Next {
+  right: 0;
+}
+
+.Slide {
+  padding: 5px 10px;
+}
+
+.Project {
+  display: inline-block;
+  width: 100%;
+  height: 150px;
+  position: relative;
+  border: 2px solid #000;
+}
+.Project img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Project h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  text-transform: uppercase;
+  display: inline-block;
+  background: #fff;
+  border-radius: 0 0 10px 0;
+  padding: 5px 10px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  max-width: 75%;
+}
+.Project h3::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Project h3::selection {
+  background: #000;
+  color: #fff;
+}
+.Project p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  background: #fff;
+  border-radius: 10px 0 0 0;
+  padding: 5px;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  max-width: 50%;
+}
+.Project p::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Project p::selection {
+  background: #000;
+  color: #fff;
+}
+
+@media screen and (min-width: 450px) {
+  .Slide {
+    padding: 10px;
+  }
+  .Project {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .SliderButton {
+    display: block;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Project h3 {
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+  }
+  .Project h3::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Project h3::selection {
+    background: #000;
+    color: #fff;
+  }
+  .Project p {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+  .Project p::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Project p::selection {
+    background: #000;
+    color: #fff;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Project {
+    height: 300px;
+  }
+}/*# sourceMappingURL=Projects.module.css.map */
