@@ -19,6 +19,7 @@ export type TCertificate = {
 
 export type TProduct = {
   id: string;
+  vendorCode: string;
   categoryId: string;
   title: string;
   description: string;

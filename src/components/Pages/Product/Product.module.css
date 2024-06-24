@@ -1,0 +1,107 @@
+.Product {
+  width: 100%;
+  padding: 25px 10px;
+}
+
+.Image {
+  height: 75vh;
+  min-height: 350px;
+  position: relative;
+}
+.Image img {
+  bottom: 0;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Info h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.Info h2::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Info h2::selection {
+  background: #000;
+  color: #fff;
+}
+.Info p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  padding-left: 5px;
+}
+.Info p::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+.Info p::selection {
+  background: #000;
+  color: #fff;
+}
+
+@media screen and (min-width: 450px) {
+  .Info {
+    width: 75vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 750px) {
+  .Info {
+    width: 50vw;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .Product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .Image {
+    height: 100vh;
+  }
+  .Info {
+    width: 100%;
+    justify-content: flex-end;
+    padding: 75px 25px;
+  }
+  .Info h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+  .Info h2::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Info h2::selection {
+    background: #000;
+    color: #fff;
+  }
+  .Info p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+  .Info p::-moz-selection {
+    background: #000;
+    color: #fff;
+  }
+  .Info p::selection {
+    background: #000;
+    color: #fff;
+  }
+}/*# sourceMappingURL=Product.module.css.map */

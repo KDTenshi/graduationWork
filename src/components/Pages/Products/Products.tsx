@@ -22,7 +22,7 @@ const Products: FC<ProductsProps> = async ({ id }) => {
   return (
     <div className={s.Products}>
       {products.map((product) => (
-        <Link key={product.id} className={s.Product} href={"/"}>
+        <Link key={product.id} className={s.Product} href={`/products/${product.id}`}>
           <div className={s.Product_Image}>
             <Image src={`/products${product.img}`} alt={product.title} fill />
           </div>

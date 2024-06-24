@@ -1,0 +1,81 @@
+@use "../../../styles/variables/colors" as c;
+@use "../../../styles/variables/spacings" as s;
+@use "../../../styles/variables/breakpoints" as b;
+
+@import "../../../styles/variables/mixins";
+
+.Product {
+  width: 100%;
+  padding: s.$medium s.$small;
+}
+
+.Image {
+  height: 75vh;
+  min-height: 350px;
+  position: relative;
+
+  & img {
+    bottom: 0;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: s.$small;
+
+  & h2 {
+    @include font_black_20(700);
+    text-transform: uppercase;
+  }
+
+  & p {
+    @include font_black_14();
+    padding-left: s.$extra-small;
+  }
+}
+
+@media screen and (min-width: b.$xs) {
+  .Info {
+    width: 75vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: b.$s) {
+  .Info {
+    width: 50vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: b.$m) {
+  .Product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .Image {
+    height: 100vh;
+  }
+
+  .Info {
+    width: 100%;
+    justify-content: flex-end;
+    padding: s.$extra-large s.$medium;
+
+    & h2 {
+      @include font_black_24(700);
+    }
+
+    & p {
+      @include font_black_16();
+    }
+  }
+}
